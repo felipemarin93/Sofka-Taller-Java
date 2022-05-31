@@ -11,32 +11,30 @@ package com.sofka;/*
  */
 
 
-import java.awt.font.NumericShaper;
+
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class ExerciseOne {
 
     public static void main(String[] args) {
-        Logger logger = Logger.getLogger(ExerciseOne.class.getName());
+        Logger log = Logger.getLogger("Mensaje");
+        Scanner scanner = new Scanner(System.in);
 
-        logger.log(Level.INFO,"Bienvenid@ al programa que calcula el número mayor.\n También identifica si son iguales");
+        log.info("Bienvenid@ al programa que calcula el número mayor.\n También identifica si son iguales");
 
+        log.info("Por Favor ingrese el valor del número 1");
+        int numberOne = scanner.nextInt();
 
-        int number1 = 6;
-        int number2 = 4;
+        log.info("Por Favor ingrese el valor del número 2");
+        int numberTwo = scanner.nextInt();
 
-        boolean numberOneIsBigger = number1 > number2;
-        boolean numberTwoIsBigger = number2 > number1;
-        boolean theSameNumber = number1 == number2;
-
-        if (numberOneIsBigger){
-            logger.log(Level.INFO,"El número 1 es el mayor");
-
-        }else if (numberTwoIsBigger){
-            logger.log(Level.INFO,"El número 2 es el mayor");
-
-        }else if (theSameNumber) {
-            logger.log(Level.INFO,"Ambos números son iguales");
+        if (numberOne > numberTwo){
+            log.info("El número 1 es el mayor");
+            }else if (numberOne < numberTwo){
+             log.info("El número 2 es el mayor");
+                 }else{
+                  log.info("Ambos números son iguales");
         }
     }
 }
