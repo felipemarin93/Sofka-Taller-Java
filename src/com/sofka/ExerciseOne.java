@@ -11,6 +11,7 @@ package com.sofka;/*
  */
 
 
+import java.awt.font.NumericShaper;
 import java.util.logging.Logger;
 
 public class ExerciseOne {
@@ -24,14 +25,17 @@ public class ExerciseOne {
         int number1 = 6;
         int number2 = 4;
 
+        boolean numberOneIsBigger = number1 > number2;
+        boolean numberTwoIsBigger = number2 > number1;
+        boolean theSameNumber = number1 == number2;
 
-        if (number1>number2){
+        if (numberOneIsBigger){
             logger.log(Level.INFO,"El número 1 es el mayor");
 
-        }else if (number1 < number2){
+        }else if (numberTwoIsBigger){
             logger.log(Level.INFO,"El número 2 es el mayor");
 
-        }else if ((number1) == (number2)) {
+        }else if (theSameNumber) {
             logger.log(Level.INFO,"Ambos números son iguales");
         }
     }
