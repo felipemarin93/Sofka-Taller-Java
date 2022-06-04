@@ -1,12 +1,10 @@
 package com.sofka;
 
-/**Descripcio: Ejercicio 2 Al ejercicio anterior agregar entrada por consola de dos valores e indicar si sonmayores, menores o iguales.
+/**
+ * Descripcio: Ejercicio 2 Al ejercicio anterior agregar entrada por consola de dos valores e indicar si sonmayores, menores o iguales.
  * * @author Daniel Felipe Marin
  * v1.0
  */
-
-
-
 
 
 import java.util.Scanner;
@@ -30,11 +28,11 @@ public class ExerciseTwo {
         log.info("Por Favor ingrese el valor del número 2");
         int numberTwo = scanner.nextInt();
 
-        if (numberOne > numberTwo){
+        if (numberOne > numberTwo) {
             log.info("El número 1 es el mayor");
-        }else if (numberOne < numberTwo){
+        } else if (numberOne < numberTwo) {
             log.info("El número 2 es el mayor");
-        }else{
+        } else {
             log.info("Ambos números son iguales");
         }
     }

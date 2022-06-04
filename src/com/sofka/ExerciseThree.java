@@ -1,7 +1,8 @@
 package com.sofka;
 
-/**Descripcio: Ejercicio3. Haz una aplicación que calcule el área de un círculo(pi*R2). El radio se pedirápor teclado (recuerda pasar de String a double con
- Double.parseDouble). Usa laconstante PI y el método pow de Math.
+/**
+ * Descripcio: Ejercicio3. Haz una aplicación que calcule el área de un círculo(pi*R2). El radio se pedirápor teclado (recuerda pasar de String a double con
+ * Double.parseDouble). Usa laconstante PI y el método pow de Math.
  * * @author Daniel Felipe Marin
  * v1.0
  */
@@ -25,7 +26,7 @@ public class ExerciseThree {
         //Se le asigna el valor a Radio por teclado parseandolo de String a Double
         radio = Double.parseDouble(scanner.next());
         // Se usa la clase Math para obtener PI y para elevar una potencia con POW (para la fórmula del area del círculo)
-        areaCirculo = Math.PI* Math.pow(radio,2);
+        areaCirculo = Math.PI * Math.pow(radio, 2);
 
 
         log.info("Porfavor ingresa el radio del círculo");
