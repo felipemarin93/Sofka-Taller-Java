@@ -30,9 +30,9 @@ public class ExerciseThree {
 
 
         log.info("Porfavor ingresa el radio del círculo");
-        //String areaCirculoString = String.valueOf(areaCirculo);
-        //log.info("El área del círculo es: ",areaCirculoString);
-        System.out.println("El área del círculo es: " + areaCirculo);
+        String stringResult =("El área del círculo es: " + areaCirculo);
+
+        log.info(stringResult);
 
 
     }

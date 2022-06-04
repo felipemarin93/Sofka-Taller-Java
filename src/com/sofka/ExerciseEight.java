@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
- * Descripcio: Ejercicio8. Crea una aplicación por consola que nos pida un día de la semana y que nos digasi es un día
+ * Descripcion: Ejercicio8. Crea una aplicación por consola que nos pida un día de la semana y que nos digasi es un día
  * laboral o no. Usa un switch para ello.
  * * @author Daniel Felipe Marin
  * v1.0

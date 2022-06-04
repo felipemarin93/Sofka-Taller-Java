@@ -1,6 +1,6 @@
 package com.sofka;
 /**
- * Descripcio: Ejercicio6. Muestra los números impares y pares del 1 al 100 (ambos incluidos). Usa unbucle for.
+ * Descripcion: Ejercicio6. Muestra los números impares y pares del 1 al 100 (ambos incluidos). Usa unbucle for.
  * * @author Daniel Felipe Marin
  * v1.0
  */
@@ -17,11 +17,14 @@ public class ExerciseSix {
         int numberValue = 1;
         for (int i = 1; i <= 100; i++) {
             if (numberValue % 2 == 0) {
-                System.out.println("El numero " + numberValue + " es par");
-            } else if (numberValue % 2 != 0)
-                System.out.println("El numero " + numberValue + " es impar");
+                String stringResultOne = ("El numero " + numberValue + " es par");
+                log.info(stringResultOne);
+            } else if (numberValue % 2 != 0) {
+                String stringResultTwo = ("El numero " + numberValue + " es impar");
+                log.info(stringResultTwo);
 
-            numberValue++;
+                numberValue++;
+            }
         }
     }
 }

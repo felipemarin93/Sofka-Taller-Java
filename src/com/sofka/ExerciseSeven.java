@@ -17,15 +17,19 @@ public class ExerciseSeven {
         int numberEntered;
         Scanner leer = new Scanner(System.in);
         Logger log = Logger.getLogger("Mensaje");
-        log.info("Bienvenid@ al comparador de números ingresa un número mayor a cero\n ");
+        log.info("Bienvenid@ al comparador de números, ingresa un número mayor a cero\n ");
 
         numberEntered = leer.nextInt();
 
-        System.out.println("El numero ingresado es: " + numberEntered);
+        String stringResultOne =("El numero ingresado es: " + numberEntered);
+        log.info(stringResultOne);
+
         while (numberEntered <= 0) {
-            System.out.println("Por favor intentalo de nuevo ingresa un numero mayor a cero");
+            log.info("Por favor intentalo de nuevo ingresa un numero mayor a cero\n");
+
             numberEntered = leer.nextInt();
-            System.out.println("El numero ingresado es: " + numberEntered);
+            String stringResultTwo =("El numero ingresado es: " + numberEntered);
+            log.info(stringResultTwo);
 
         }
 

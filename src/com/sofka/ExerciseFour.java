@@ -31,9 +31,12 @@ public class ExerciseFour {
         precioSinIva = Double.parseDouble(scanner.next());
         valorIva = precioSinIva*porcentajeIva;
 
-        System.out.println("El valor del IVA es: " + valorIva);
+        String resultIva = ("El valor del IVA es: " + valorIva);
+        log.info(resultIva);
 
         precioConIva = precioSinIva+valorIva;
-        System.out.println("El precio con IVA es: $ "+ precioConIva);
+        String priceWithIva = ("El precio con IVA es: $ "+ precioConIva);
+        log.info(priceWithIva);
+
     }
 }

@@ -2,7 +2,7 @@ package com.sofka;
 
 
 /**
- * Descripcio: Ejercicio5. Muestra los números impares y pares del 1 al 100 (ambos incluidos). Usa unbucle while.
+ * Descripcion: Ejercicio5. Muestra los números impares y pares del 1 al 100 (ambos incluidos). Usa unbucle while.
  * * @author Daniel Felipe Marin
  * v1.0
  */
@@ -19,11 +19,14 @@ public class ExerciseFive {
         int numberValue = 1;
         while (numberValue <= 100) {
             if (numberValue % 2 == 0) {
-                System.out.println("El numero " + numberValue + " es par");
-            } else if (numberValue % 2 != 0)
-                System.out.println("El numero " + numberValue + " es impar");
+                String stringResultOne = ("El número " + numberValue + " es par");
+                log.info(stringResultOne);
+            } else if (numberValue % 2 != 0) {
+                String stringResultTwo = ("El número " + numberValue + " es impar");
+                log.info(stringResultTwo);
 
-            numberValue++;
+                numberValue++;
+            }
         }
     }
 }

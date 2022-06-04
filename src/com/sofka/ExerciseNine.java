@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
- * Descripcio: Ejercicio9. Del texto, “La sonrisa sera la mejor arma contra la tristeza” Reemplaza todas las
+ * Descripcion: Ejercicio9. Del texto, “La sonrisa sera la mejor arma contra la tristeza” Reemplaza todas las
  * a del String anterior por una e, adicionalmente concatenar a esta frase una adicional que ustedes quieran
  * incluir por consola y las muestre luego unidas.
  * * @author Daniel Felipe Marin
@@ -17,16 +17,18 @@ public class ExerciseNine {
         Scanner scanner = new Scanner(System.in);
         Logger log = Logger.getLogger("Mensaje");
 
-        log.info("Bienvenid@ al programa que cambia la letra\n");
         String phraseStored = "La sonrisa sera la mejor arma contra la tristeza";
 
-        System.out.println("Por favor ingresa una frase");
+        log.info("Bienvenid@ al programa que cambia las letras a por las e\n");
+        log.info("Por favor ingresa una frase\n");
+
         String phraseEntered = scanner.nextLine();
 
         phraseStored = phraseStored.replace("a", "e");
 
 
-        System.out.println(phraseStored + " " + phraseEntered);
+        String result = (phraseStored + " " + phraseEntered);
+        log.info(result);
     }
 
 
