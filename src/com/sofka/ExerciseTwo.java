@@ -1,13 +1,11 @@
-package com.sofka;/*
- * @author Daniel Felipe Marin
- * Ejercicio 2 Al ejercicio anterior agregar entrada por consola de dos valores e indicar si sonmayores, menores o iguales.
- *
+package com.sofka;
+
+/**Descripcio: Ejercicio 2 Al ejercicio anterior agregar entrada por consola de dos valores e indicar si sonmayores, menores o iguales.
+ * * @author Daniel Felipe Marin
+ * v1.0
  */
-/*
- * Se declaran dos variables númericas con un valor respectivamente
- * Por último se hace la comparación en un ciclo If el cual determina cual es el número mayor
- * o si son iguales mostrando por consola el resultado
- */
+
+
 
 
 
@@ -16,6 +14,10 @@ import java.util.logging.Logger;
 
 public class ExerciseTwo {
 
+    /**Se declaran dos variables númericas con un valor respectivamente
+     *Por último se hace la comparación en un ciclo If el cual determina cual es el número mayor
+     *o si son iguales mostrando por consola el resultado
+     */
     public static void main(String[] args) {
         Logger log = Logger.getLogger("Mensaje");
         Scanner scanner = new Scanner(System.in);

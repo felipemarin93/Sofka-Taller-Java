@@ -1,8 +1,0 @@
-
-0
-java:S1220""Move this file to a named package.
-9
-java:S1659"#Declare "radio" on a separate line.(ÖÆÄè
-N	java:S106"9Replace this use of System.out or System.err by a logger.(üþ­Á
-N	java:S106"9Replace this use of System.out or System.err by a logger.(šß–ò
-M	java:S106"9Replace this use of System.out or System.err by a logger.(ä¸–
