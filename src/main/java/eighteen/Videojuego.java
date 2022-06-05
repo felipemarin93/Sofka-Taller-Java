@@ -110,7 +110,7 @@ public class Videojuego {
      * <li>-1: El videojuego 1 es menor que el videojuego 2</li></ul>
      */
     @Override
-    public int compararVideoJuegoPorHoras(Object a) {
+    public int compareTo(Object a) {
         int estado=menor;
 
         Videojuego ref=(Videojuego)a;
@@ -129,7 +129,7 @@ public class Videojuego {
      * @param a videojuego a comparar
      * @return true si son iguales y false si son distintos
      */
-    public boolean compararVideoJuego(Videojuego a){
+    public boolean equals(Videojuego a){
         if (titulo.equalsIgnoreCase(a.getTitulo()) && compania.equalsIgnoreCase(a.getCompania())){
             return true;
         }

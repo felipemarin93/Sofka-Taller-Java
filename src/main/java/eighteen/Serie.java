@@ -2,7 +2,7 @@ package eighteen;
 
 import org.jboss.logging.Logger;
 
-public class Serie {
+public class Serie implements IEntregable {
     Logger log = Logger.getLogger("Mensaje");
     public final static int mayor = 1;
     public final static int menor = -1;
@@ -101,6 +101,11 @@ public class Serie {
         return this.entregado;
     }
 
+    @Override
+    public int compareTo(Object a) {
+        return 0;
+    }
+
     /**
      * * Compara dos series segun su numero de temporadas
      *  <ul>
@@ -112,7 +117,7 @@ public class Serie {
      * @return
      */
     @Override
-    public int compararSeriePorTemporadas(Object a) {
+    public int compareTo(Object a) {
         int estado = menor;
 
         Serie ref = (Serie) a;
@@ -132,7 +137,7 @@ public class Serie {
      * @param a Serie a comparar
      * @return true si son iguales y false si son distintos
      */
-    public boolean compararSerie(Serie a) {
+    public boolean equals(Serie a) {
         if (titulo.equalsIgnoreCase(a.getTitulo()) && creador.equalsIgnoreCase(a.getCreador())) {
             return true;
         }
