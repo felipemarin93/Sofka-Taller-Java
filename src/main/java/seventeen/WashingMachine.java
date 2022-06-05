@@ -1,37 +1,37 @@
 package seventeen;
 
-public class Lavadora extends Electrodomestic {
+public class WashingMachine extends Electrodomestic {
 
     int charge;
-    public static final int carga_def = 5;
+    public static final int defaultCharge = 5;
 
     /**
      *Un constructor por defecto
      */
-    public Lavadora() {
+    public WashingMachine() {
 
     }
 
     /**
      * Un constructor con el precio y peso
-     * @param precioBase
-     * @param peso
+     * @param basePrice
+     * @param weight
      */
-    public Lavadora(double precioBase, double peso) {
-        super(precioBase, peso);
+    public WashingMachine(double basePrice, double weight) {
+        super(basePrice, weight);
 
     }
 
     /**
      * Un constructor con la carga y el resto de atributos heredados
      * @param color
-     * @param consumoEnergetico
-     * @param precioBase
-     * @param peso
+     * @param energyConsumption
+     * @param basePrice
+     * @param weight
      * @param charge
      */
-    public Lavadora(String color, char consumoEnergetico, double precioBase, double peso, int charge) {
-        super(color, consumoEnergetico, precioBase, peso);
+    public WashingMachine(String color, char energyConsumption, double basePrice, double weight, int charge) {
+        super(color, energyConsumption, basePrice, weight);
         this.charge = charge;
     }
 
@@ -45,12 +45,12 @@ public class Lavadora extends Electrodomestic {
      * @return
      */
     @Override
-    public double precioFinal() {
-        double max = super.precioFinal();
+    public double getFinalPrice() {
+        double increasePrice = super.getFinalPrice();
         if (charge > 30) {
-            max += 50;
+            increasePrice += 50;
 
         }
-        return max;
+        return increasePrice;
     }
 }

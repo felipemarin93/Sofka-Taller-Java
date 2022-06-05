@@ -7,7 +7,7 @@ public class Electrodomestic {
 
     Logger log = Logger.getLogger("Mensaje");
     public static final String defaultColor = "Blanco";
-    public static final char defaultPowerConsumption = 'F';
+    public static final char defaultEnergyConsumption = 'F';
     public static final double defaultBasePrice = 100;
     public static final double defaultWeight = 5;
     String electrodomesticColor;
@@ -37,14 +37,14 @@ public class Electrodomestic {
      * Un constructor con todos los atributos.
      *
      * @param electrodomesticColor
-     * @param powerConsumption
+     * @param energyConsumption
      * @param basePrice
      * @param electrodomesticWeight
      */
 
-    public Electrodomestic(String electrodomesticColor, char powerConsumption, double basePrice, double electrodomesticWeight) {
+    public Electrodomestic(String electrodomesticColor, char energyConsumption, double basePrice, double electrodomesticWeight) {
         this.electrodomesticColor = electrodomesticColor;
-        this.powerConsumption = powerConsumption;
+        this.powerConsumption = energyConsumption;
         this.basePrice = basePrice;
         this.electrodomesticWeight = electrodomesticWeight;
 
@@ -55,6 +55,8 @@ public class Electrodomestic {
      *
      * @return
      */
+
+
     public String getElectrodomesticColor() {
         return electrodomesticColor;
     }
@@ -126,42 +128,42 @@ public class Electrodomestic {
      * @return
      */
     public double getFinalPrice() {
-        double max = 0;
+        double maximumPrice = 0;
         switch (powerConsumption) {
             case 'A':
-                max += 100;
+                maximumPrice += 100;
                 break;
             case 'B':
-                max += 80;
+                maximumPrice += 80;
                 break;
             case 'C':
-                max += 60;
+                maximumPrice += 60;
                 break;
             case 'D':
-                max += 50;
+                maximumPrice += 50;
                 break;
             case 'E':
-                max += 30;
+                maximumPrice += 30;
                 break;
             case 'F':
-                max += 10;
+                maximumPrice += 10;
                 break;
             default:{
                     log.info("No existe categoria");
             }
         }
         if (electrodomesticWeight >= 0 && electrodomesticWeight < 19) {
-            max += 10;
+            maximumPrice += 10;
         } else if (electrodomesticWeight >= 20 && electrodomesticWeight < 49) {
-            max += 50;
+            maximumPrice += 50;
         } else if (electrodomesticWeight >= 50 && electrodomesticWeight < 79) {
-            max += 80;
+            maximumPrice += 80;
 
         } else if (electrodomesticWeight > 80) {
-            max += 100;
+            maximumPrice += 100;
         }
 
-        return basePrice + max;
+        return basePrice + maximumPrice;
     }
 
 

@@ -1,16 +1,16 @@
 package seventeen;
 
-public class Television extends Electrodomestico {
+public class Television extends Electrodomestic {
 
-    double resolucion;
-    boolean sintonizador_TDT;
+    double resolution;
+    boolean tunerTdt;
 
     /**
      * Constructor por defecto
      */
     public Television() {
-        this.sintonizador_TDT = false;
-        this.resolucion = 20;
+        this.tunerTdt = false;
+        this.resolution = 20;
 
 
     }
@@ -18,13 +18,13 @@ public class Television extends Electrodomestico {
     /**
      * Un constructor con el precio y peso
      *
-     * @param precioBase
-     * @param peso
+     * @param basePrice
+     * @param weight
      */
-    public Television(double precioBase, double peso) {
-        super(precioBase, peso);
-        this.sintonizador_TDT = false;
-        this.resolucion = 20;
+    public Television(double basePrice, double weight) {
+        super(basePrice, weight);
+        this.tunerTdt = false;
+        this.resolution = 20;
 
     }
 
@@ -32,20 +32,24 @@ public class Television extends Electrodomestico {
      * Un constructor con la resolución, sintonizador TDT y el resto de atributos heredados
      *
      * @param color
-     * @param consumoEnergetico
-     * @param precioBase
-     * @param peso
-     * @param resolucion
-     * @param sintonizador_TDT
+     * @param energyConsumption
+     * @param basePrice
+     * @param weight
+     * @param resolution
+     * @param tunerTdt
      */
-    public Television(String color, char consumoEnergetico, double precioBase, double peso, double resolucion, boolean sintonizador_TDT) {
-        super(color, consumoEnergetico, precioBase, peso);
-        this.resolucion = resolucion;
-        this.sintonizador_TDT = sintonizador_TDT;
+    public Television(String color, char energyConsumption, double basePrice, double weight, double resolution, boolean tunerTdt) {
+        super(color, energyConsumption, basePrice, weight);
+        this.resolution = resolution;
+        this.tunerTdt = tunerTdt;
     }
 
-    public double getResolucion() {
-        return resolucion;
+    public double getResolution() {
+        return resolution;
+    }
+
+    public boolean getTunerTdt() {
+        return tunerTdt;
     }
 
     /**
@@ -54,15 +58,16 @@ public class Television extends Electrodomestico {
      *
      * @return
      */
-    public double precioFinal() {
-        double max = super.precioFinal();
-        if (resolucion > 40) {
-            max += precioBase * 0.3;
-        } else if (sintonizador_TDT) {
-            max += 50;
+    @Override
+    public double getFinalPrice() {
+        double increasePrice = super.getFinalPrice();
+        if (resolution > 40) {
+            increasePrice += basePrice * 0.3;
+        } else if (tunerTdt) {
+            increasePrice += 50;
         }
 
-        return max;
+        return increasePrice;
     }
 
 }
