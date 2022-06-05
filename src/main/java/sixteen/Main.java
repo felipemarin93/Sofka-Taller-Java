@@ -44,9 +44,6 @@ public class Main {
         persona3.mostrarPersonaDos();
         persona3.generarDni();
 
-//        Persona persona4 = new Persona();
-//        persona4.mostrarPersonaDos();
-//        persona4.generarDni();
 
     }
 

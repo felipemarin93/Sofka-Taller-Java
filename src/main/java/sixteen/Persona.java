@@ -80,10 +80,31 @@ public class Persona {
      */
     public void generarDni() {
 
-        dni = new Random(4234);
-        String dniFinal = "Su DNI es: " + dni;
-        log.info(dniFinal);
-    }
+        String theAlphaNumericS;
+        StringBuilder builder;
+
+        theAlphaNumericS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "0123456789";
+
+        //crear el StrinBuilder
+        int  i = 8;
+        builder = new StringBuilder(i);
+
+        for (int m = 0; m < i; m++) {
+
+            // generate numeric
+            int myindex
+                    = (int)(theAlphaNumericS.length()
+                    * Math.random());
+
+            // add the characters
+            builder.append(theAlphaNumericS
+                    .charAt(myindex));
+        }
+        String dniFinal= builder.toString();
+        log.info("DNI: "+ dniFinal);
+
+  }
 
 
     /**
