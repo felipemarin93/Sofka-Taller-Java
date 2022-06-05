@@ -1,13 +1,14 @@
 package com.sofka;
 
 
+import org.jboss.logging.Logger;
+
 /**
  * Descripcion: Ejercicio5. Muestra los números impares y pares del 1 al 100 (ambos incluidos). Usa unbucle while.
  * * @author Daniel Felipe Marin
  * v1.0
  */
 
-import java.util.logging.Logger;
 
 public class ExerciseFive {
 
@@ -19,11 +20,10 @@ public class ExerciseFive {
         int numberValue = 1;
         while (numberValue <= 100) {
             if (numberValue % 2 == 0) {
-                String stringResultOne = ("El número " + numberValue + " es par");
-                log.info(stringResultOne);
+                log.info("El número par" + numberValue + " es par");
+
             } else if (numberValue % 2 != 0) {
-                String stringResultTwo = ("El número " + numberValue + " es impar");
-                log.info(stringResultTwo);
+                log.info("El número " + numberValue + " es impar");
 
                 numberValue++;
             }
