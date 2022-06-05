@@ -1,5 +1,11 @@
 package seventeen;
 
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase lavadora que extiende atributos y métodos de Electrodomestico
+ * se usa herencia y polimorfismo.
+ */
 public class WashingMachine extends Electrodomestic {
 
     int charge;

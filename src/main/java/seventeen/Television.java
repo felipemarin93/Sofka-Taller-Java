@@ -1,5 +1,13 @@
 package seventeen;
 
+
+
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase television que extiende atributos y métodos de Electrodomestico
+ * se usa herencia y polimorfismo
+ */
 public class Television extends Electrodomestic {
 
     double resolution;

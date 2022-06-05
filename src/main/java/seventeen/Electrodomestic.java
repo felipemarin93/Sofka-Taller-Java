@@ -3,6 +3,12 @@ package seventeen;
 
 import org.jboss.logging.Logger;
 
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Super clase electrodomestico que tiene atributos y métodos
+ */
+
 public class Electrodomestic {
 
     Logger log = Logger.getLogger("Mensaje");

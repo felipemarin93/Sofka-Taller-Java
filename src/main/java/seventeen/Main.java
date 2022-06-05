@@ -3,6 +3,11 @@ package seventeen;
 
 import org.jboss.logging.Logger;
 
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase main para ejecutar el proyecto
+ */
 public class Main {
 
     public static void main(String[] args) {
