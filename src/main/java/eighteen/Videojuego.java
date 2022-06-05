@@ -2,7 +2,14 @@ package eighteen;
 
 import org.jboss.logging.Logger;
 
-public class Videojuego {
+
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase VideoJuego donde se crean atributos y métodos , además de los constructores (por defecto y los solicitados)
+ * además se generar otros métodos para encontrar el videoJeugo mas jugado
+ */
+public class Videojuego implements IEntregable{
     Logger log = Logger.getLogger("Mensaje");
     public final static int mayor = 1;
     public final static int menor = -1;
@@ -129,7 +136,7 @@ public class Videojuego {
      * @param a videojuego a comparar
      * @return true si son iguales y false si son distintos
      */
-    public boolean equals(Videojuego a){
+    public boolean compararVideoJuegoPorTitulo(Videojuego a){
         if (titulo.equalsIgnoreCase(a.getTitulo()) && compania.equalsIgnoreCase(a.getCompania())){
             return true;
         }

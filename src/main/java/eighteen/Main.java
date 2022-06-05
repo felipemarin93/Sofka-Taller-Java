@@ -2,32 +2,35 @@ package eighteen;
 
 import org.jboss.logging.Logger;
 
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase Main donde se instancian los Objetos tipo Array y se llena para utilizar los métodos de las clases serie y videojuego
+ * además se especifica que est clase es la que retorna las salidas por consola
+ */
 public class Main {
     public static void main(String[] args) {
 
         Logger log = Logger.getLogger("Mensaje");
         log.info("<<<Bienvenido al programa>>>");
-        Serie series[] = new Serie[5];
-        Videojuego juego[] = new Videojuego[5];
-        series[0] = new Serie("la diosa", 12, "comedia", "robinson");
-        series[1] = new Serie("dios", 12, "terror", "marlon");
-        series[2] = new Serie("la selva", "maria");
+        Serie[] series = new Serie[5];
+        Videojuego[] juego = new Videojuego[5];
+        series[0] = new Serie("LaCasaDePapel", 5, "atracos", "NN");
+        series[1] = new Serie("Walking Dead", 10, "terror", "NN");
+        series[2] = new Serie("Stranger Things", "Juan");
         series[3] = new Serie("calamar", "japonini");
-        series[4] = new Serie("pablo escobar", 96, "violencia", "caracol");
-        juego[0] = new Videojuego("futbol", "konami", 10, "deporte");
-        juego[1] = new Videojuego("the witcher", "red studio", 300, "RPG");
-        juego[2] = new Videojuego("Fifa Street", 12);
-        juego[3] = new Videojuego("call of duty", 700);
-        juego[4] = new Videojuego("free fire", 600);
+        series[4] = new Serie("pablo escobar", 4, "violencia", "caracol");
+        juego[0] = new Videojuego("FIFA21", "EASportd", 16, "deporte");
+        juego[1] = new Videojuego("POKEMON", "PokeDev", 190, "Rol");
+        juego[2] = new Videojuego("LOL", 12);
+        juego[3] = new Videojuego("CoD MOBILE", 700);
+        juego[4] = new Videojuego("FORTNITE", 600);
 
         Serie retornarTemporadas = new Serie();
         Videojuego retornarHoras = new Videojuego();
         retornarTemporadas.calcularTemporada(series);
         retornarHoras.calcularHoras(juego);
 
-/**
- * Entrega algunos Videojuegos y Series con el método entregar().
- */
         for (int i = 0; i < series.length; i++) {
             if (i % 2 == 0) {
                 series[i].entregar();
@@ -38,34 +41,28 @@ public class Main {
                 juego[i].entregar();
             }
         }
-        /**
-         * Me devuelve las series y video juegos entregadas
-         */
-        for (int i = 0; i < series.length; i++) {
-            if (series[i].entregado == true) {
+        for (Serie serie : series) {
+            if (serie.entregado) {
 
-                System.out.println("Las series que tienen de estado true son : \n" + series[i].toString());
+                log.info("Las series que tienen de estado true son : \n" + serie);
 
             }
         }
-        for (int i = 0; i < juego.length; i++) {
-            if (juego[i].entregado == true) {
+        for (Videojuego value : juego) {
+            if (value.entregado) {
 
-                System.out.println("Los juegos que tienen de estado true son : \n" + juego[i].toString());
+                log.info("Los juegos que tienen de estado true son : \n" + value);
             }
         }
-        /**
-         * Me devuelve el estado del atributo entregado
-         */
-        for (int i = 0; i < juego.length; i++) {
-            log.info("El estado del atributo prestado del juego : " + juego[i].titulo
-                    + "\n " + "es:" + juego[i].isEntregado());
+        for (Videojuego videojuego : juego) {
+            log.info("El estado del atributo prestado del juego : " + videojuego.titulo
+                    + "\n " + "es:" + videojuego.isEntregado());
         }
-        for (int i = 0; i < series.length; i++) {
-            log.info("El estado del atributo prestado de la serie : " + series[i].titulo
-                    + "\n " + "es:" + series[i].isEntregado());
+        for (Serie serie : series) {
+            log.info("El estado del atributo prestado de la serie : " + serie.titulo
+                    + "\n " + "es:" + serie.isEntregado());
         }
-        System.out.println("");
+        log.info("");
         Serie serieMayor = series[0];
         Videojuego videojuegoMayor = juego[0];
 
@@ -79,6 +76,7 @@ public class Main {
 
         }
 
-        log.info("El video juego mayor es: \n + videojuegoMayor");
-        log.info("La serie mayor es: \n" + serieMayor);
+        log.info("El video juego mas jugado es: \n" + videojuegoMayor);
+        log.info("La serie con mas temporadas es: \n" + serieMayor);
     }
+}

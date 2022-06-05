@@ -2,6 +2,13 @@ package eighteen;
 
 import org.jboss.logging.Logger;
 
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase Serie donde se crean atributos y métodos , además de los constructores (por defecto y los solicitados)
+ * además se generar otros métodos para encontrar la serie con mas temporadas
+ */
+
 public class Serie implements IEntregable {
     Logger log = Logger.getLogger("Mensaje");
     public final static int mayor = 1;
@@ -101,11 +108,6 @@ public class Serie implements IEntregable {
         return this.entregado;
     }
 
-    @Override
-    public int compareTo(Object a) {
-        return 0;
-    }
-
     /**
      * * Compara dos series segun su numero de temporadas
      *  <ul>
@@ -137,7 +139,7 @@ public class Serie implements IEntregable {
      * @param a Serie a comparar
      * @return true si son iguales y false si son distintos
      */
-    public boolean equals(Serie a) {
+    public boolean compararSeriePorTitulo(Serie a) {
         if (titulo.equalsIgnoreCase(a.getTitulo()) && creador.equalsIgnoreCase(a.getCreador())) {
             return true;
         }
@@ -166,7 +168,7 @@ public class Serie implements IEntregable {
     }
 
     /**
-     * Metodo toString que muestra la informacion de la serie, con la anotación override
+     * Metodo toString que muestra la informacion de la serie
      *
      * @return
      */
