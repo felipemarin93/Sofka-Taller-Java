@@ -2,7 +2,12 @@ package sixteen;
 import java.util.Random;
 import java.util.logging.Logger;
 
-
+/**
+ * * @author Daniel Felipe Marin  - felipemariniraldo@gmail.com
+ * v1.0
+ * Clase creada para generar los atributos de Persona, y 3 tipos de constructores como se pidió en el ejercicio
+ * además contiene los métodos solicitas como: ObtenerDNI, ComprobarSexo,mayorDeEdad y Calcular IMC
+ */
 public class Persona {
     Logger log = Logger.getLogger("Mensaje");
     private String nombre;
@@ -11,7 +16,7 @@ public class Persona {
     private Random dni;
     private String sexo;
     private Double altura;
-    private final String sexoDef = "H";
+    public final String sexoDef = "H";
     public final int pesoBajo = -1;
     public final int pesoIdeal = 0;
     public final int pesoAlto = 1;
@@ -80,31 +85,10 @@ public class Persona {
      */
     public void generarDni() {
 
-        String theAlphaNumericS;
-        StringBuilder builder;
-
-        theAlphaNumericS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                + "0123456789";
-
-        //crear el StrinBuilder
-        int  i = 8;
-        builder = new StringBuilder(i);
-
-        for (int m = 0; m < i; m++) {
-
-            // generate numeric
-            int myindex
-                    = (int)(theAlphaNumericS.length()
-                    * Math.random());
-
-            // add the characters
-            builder.append(theAlphaNumericS
-                    .charAt(myindex));
-        }
-        String dniFinal= builder.toString();
-        log.info("DNI: "+ dniFinal);
-
-  }
+        dni = new Random(4234);
+        String dniFinal = "Su DNI es: " + dni;
+        log.info(dniFinal);
+    }
 
 
     /**
